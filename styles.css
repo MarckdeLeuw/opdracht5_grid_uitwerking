@@ -1,1 +1,74 @@
-/*Maak hier jouw CSS!*/
+/*CSS_MWdeLeuw*/
+
+body{
+    background-color: #ffefdb ;
+}
+.wrapper > div {
+    background: #ba3b44;
+    color: white;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 190px 100px auto 50px 50px;
+    grid-gap: 16px;
+}
+.boxA {
+    grid-column: 1;
+    grid-row: 1;
+}
+.boxB {
+    grid-column: 1;
+    grid-row: 2/5;
+}
+.boxC {
+    grid-column: 2/4;
+    grid-row: 1/3;
+}
+.boxD {
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+.boxE {
+    grid-column: 2/3;
+    grid-row: 3/5;
+}
+.boxF {
+    grid-column: 1/4;
+    grid-row: 5/6;
+}
+@media(max-width: 768px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto 50px 50px 50px 50px;
+    }
+    .boxA {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .boxB {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .boxC {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .boxD {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .boxE {
+        grid-column: 1;
+        grid-row: 5;
+    }
+    .boxF {
+        grid-column: 1;
+        grid-row: 7;
+    }
+}
